@@ -551,9 +551,29 @@ mini-poll { display: block; }
 .tb-emg{background:rgba(250,61,160,.10);color:var(--org);border:1px solid rgba(250,61,160,.4)}
 .tb-com{background:rgba(169,249,38,.10);color:var(--amber);border:1px solid rgba(169,249,38,.4)}
 .tb-no{background:rgba(78,25,237,.10);color:var(--rose);border:1px solid rgba(78,25,237,.4)}
+
+#bgtext{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.bgline{position:absolute;left:-25%;width:150%;transform:rotate(-20deg)}
+.bgtrack{display:inline-block;white-space:nowrap;animation:wmdrift var(--spd,120s) linear infinite}
+.bgline.rev .bgtrack{animation-direction:reverse}
+.bgtrack b{font-weight:900;letter-spacing:.04em;color:transparent;-webkit-text-stroke:1px var(--sc,rgba(167,139,250,.38))}
+.bgtrack i{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(152,164,192,.22);margin:0 .7em}
+.w1{--sc:rgba(167,139,250,.38)}
+.w2{--sc:rgba(74,222,128,.34)}
+@keyframes wmdrift{to{transform:translateX(-50%)}}
+@media(max-width:900px){ .bgline.mhide{display:none} }
+@media (prefers-reduced-motion:reduce){ .bgtrack{animation:none} }
 </style>
 </head>
 <body>
+<div id="bgtext" aria-hidden="true">
+<div class="bgline" style="top:4%;font-size:6rem;--spd:138s"><div class="bgtrack"><span><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span><span aria-hidden="true"><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span></div></div>
+<div class="bgline rev" style="top:22%;font-size:3.2rem;--spd:106s"><div class="bgtrack"><span><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span><span aria-hidden="true"><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span></div></div>
+<div class="bgline" style="top:40%;font-size:7rem;--spd:162s"><div class="bgtrack"><span><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span><span aria-hidden="true"><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span></div></div>
+<div class="bgline rev mhide" style="top:58%;font-size:2.8rem;--spd:119s"><div class="bgtrack"><span><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span><span aria-hidden="true"><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span></div></div>
+<div class="bgline mhide" style="top:76%;font-size:6rem;--spd:150s"><div class="bgtrack"><span><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span><span aria-hidden="true"><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span></div></div>
+<div class="bgline rev mhide" style="top:90%;font-size:3rem;--spd:100s"><div class="bgtrack"><span><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span><span aria-hidden="true"><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i><b class="w1">PUSHING</b><i>·</i><b class="w2">P</b><i>·</i></span></div></div>
+</div>
 <svg class="sr-only" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="triGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -687,9 +707,10 @@ mini-poll { display: block; }
       <g font-size="13" font-weight="800" text-anchor="middle">
         <rect x="20" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#5c27f9" stroke-width="2"/>
         <circle cx="84" cy="86" r="18" fill="none" stroke="#5c27f9" stroke-width="2" class="ringp"/>
-        <text x="84" y="118" fill="#5c27f9">1 · DOCK</text>
-        <text x="84" y="144" fill="#a9b1c9" font-size="11" font-weight="600">Finds MC1R</text>
-        <text x="84" y="160" fill="#a9b1c9" font-size="11" font-weight="600">on gut, skin, immune cells</text>
+        <text x="84" y="112" fill="#5c27f9">1 · DOCK</text>
+        <text x="84" y="134" fill="#a9b1c9" font-size="11" font-weight="600">Finds MC1R</text>
+        <text x="84" y="150" fill="#a9b1c9" font-size="11" font-weight="600">on gut, skin,</text>
+        <text x="84" y="166" fill="#a9b1c9" font-size="11" font-weight="600">immune cells</text>
         <rect x="172" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#49fa8a" stroke-width="2"/>
         <circle cx="236" cy="86" r="18" fill="none" stroke="#49fa8a" stroke-width="2" class="ringp"/>
         <text x="236" y="118" fill="#49fa8a">2 · QUIET</text>
